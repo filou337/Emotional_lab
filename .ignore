@@ -1,0 +1,15 @@
+# Environnement virtuel
+.venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Configuration locale
+.env
+
+# Données personnelles
+data/raw/
+
+# Fichiers temporaires
+*.log

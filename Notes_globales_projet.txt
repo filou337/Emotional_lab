@@ -1,0 +1,38 @@
+##################################################################
+Step1: Setup :
+ - python3 --version 
+ -git --version
+ 
+ - python -m venv .name_of_venv
+ - source bin/activate
+ 
+ python3 -m pip install --upgrade pip
+ 
+ pip install opencv-python numpy
+ 
+ opencv-python  (cv2): sert au Computer Vision , Traitement d'images , Traitement vidéo , Transformation d'images , Détection d'objets
+ numpy  : 	Calcul numérique , 	Manipulation de tableaux multidimensionnels , Calcul matriciel , Calcul stat , 	Algèbre linéaire
+ avantage  : les 2 travaillent ensemble car opencv transforme sous forme d'array les images / videsos ,.... )
+ mise en place du setup git : 
+ 
+
+ a quoi sert requirements.txt :  ala reproducbilité pour les autres utilisateurs grâce à : " pip install -r requirements.txt" 
+ POurquoi ne pas partager le .venv : plusieur raison ( poid, portabilité ( il peut dépendre d'un os , de l aversion pyhton ou paths locaux ), redondance , versionnement  ( git doit suivre le code source et pas les bibliothèques associés))
+ 
+ 
+
+##########################################################################
+
+Step 2 : premiere activation de la cam 
+
+
+pour cela nous allons creer une variable qui va récuperer les objet vidéo avec : cam  = cv2.VideoCapture()
+
+* cv2.VideoCapture(0) = pour implémenter la cam par défaut 
+- cv2.VideoCapture(1) = pour mettre en place une 2e caméra 
+- cv2.VideoCapture(3) = pour mettre en place une 3e caméra 
+"vidéo mp4" = Fichier vidéo local
+
+Pour verifier l'accecibilité d'un caméra : cam.isOpened()
+Pour découvrir les attibuts disponnible par la cv2 = print(dir(cv2))
+
